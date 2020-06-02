@@ -1,0 +1,10 @@
+td {
+    line-height: 24px;
+    min-width: 130px;
+    background-color: rgba(131, 131, 131, 0.1);
+    padding: 4px;
+}
+
+.firstrow {
+    display: none;
+}
