@@ -50,3 +50,12 @@
   .toolbar #twitter-logo:hover {
     opacity: 0.8;
   }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    text-decoration: underline;
+  }
