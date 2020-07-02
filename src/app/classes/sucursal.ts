@@ -5,8 +5,17 @@ export class Sucursal {
     constructor(
         private _nombre: string,
         private _lugar: string,
+        private _direccion: string,
         private _ventaspormes: Array<number>
     ) { }
+
+    get direccion(): string { // get por defecto
+        return this._direccion;
+    }
+
+    set direccion(direcc: string) { // set por defecto
+        this.direccion = direcc;
+    }
 
     get nombre(): string { // get por defecto
         return this._nombre;

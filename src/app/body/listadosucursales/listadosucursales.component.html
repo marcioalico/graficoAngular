@@ -1,12 +1,10 @@
 <h2>Sucursales</h2>
-<p *ngIf="(this.listadoSucursales && this.listadoSucursales[1]) && (this.listadoSucursales[1].getVentasMes(1) > 100)">
-    Las ventas de Enero de la Sucursal Norte son altas
-</p>
 <table>
     <thead>
         <tr>
             <th>Indice</th>
             <th>Sucursal</th>
+            <th>Dirección</th>
             <th>Lugar</th>
             <th>Ventas Enero</th>
         </tr>
@@ -15,29 +13,11 @@
         <tr *ngFor="let sucursal of this.listadoSucursales; let i = index">
             <td>{{ i }}</td>
             <td>{{ sucursal.nombre }}</td>
+            <td>{{ sucursal.direccion }}</td>
             <td>{{ sucursal.lugar }}</td>
             <td>{{ sucursal.getVentasMes(1) }}</td>
         </tr>
     </tbody>
 </table>
-<br/>
-<button (click)='this.listadoSucursales[1].setVentasMes(200, 1)'>Incrementar ventas de Enero para la sucursal Norte</button>
-<br/><br/>
-<button (click)='this.listadoSucursales[1].setVentasMes(50, 1)'>Decrementar ventas de Enero para la sucursal Norte</button>
-<hr>
-<h2>Ventas por mes de la Sucursal Norte</h2>
-<ul>
-    <li *ngFor="let mes of Meses; let i = index" [ngClass]="{'firstrow': i==0}">
-        <p *ngIf="i > 0">
-            Mes: {{ mes.nombre }}
-            Ventas: {{ this.listadoSucursales[1].getVentasMes(i) }}
-        </p>
-    </li>
-</ul>
-<!-- Dado la variable var estado = 1-->
-<h3>Evaluación de las ventas de Enero de la Sucursal Norte</h3>
-<div [ngSwitch]="this.listadoSucursales[1].getVentasMes(1)">
-    <p *ngSwitchCase="50">Ventas Bajas</p>
-    <p *ngSwitchCase="200">Ventas Altas</p>
-    <p *ngSwitchDefault>Ventas regulares</p>
-</div>
+  
+

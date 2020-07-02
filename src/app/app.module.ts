@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NextstepsComponent } from './body/nextsteps/nextsteps.component';
 import { ListadoclientesComponent } from './body/listadoclientes/listadoclientes.component';
 import { ListadosucursalesComponent } from './body/listadosucursales/listadosucursales.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraficoSucursalesComponent } from './grafico-sucursales/grafico-sucursales.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ListadosucursalesComponent } from './body/listadosucursales/listadosucu
     FooterComponent,
     NextstepsComponent,
     ListadoclientesComponent,
-    ListadosucursalesComponent
+    ListadosucursalesComponent,
+    GraficoSucursalesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
